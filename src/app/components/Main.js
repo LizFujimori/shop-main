@@ -20,18 +20,28 @@ export default function Main() {
   }
   const orderZa = () => {
     let listAux = [...listProduct].sort((a, b) => a.title.localeCompare(b.title));
+  }
 
-    listAux = listAux.reverse();
-    setProduct(listAux);
+    const orderC = () => {
+      const listAuxC = [...listProduct].sort((a, b) => a.price - b.price );
+      setProduct(listAuxC)
+    }
+    const orderD = () => {
+      let listAuxC = [...listProduct].sort((a, b) => a.price - b.price );
+
+    listAuxC = listAuxC.reverse();
+    setProduct(listAuxC);
   }
 
   
   return (
     <>
-    <div className={styles.filter}>
+    <div>
       <div>
         <button onClick={ orderAz }> Az </button>
         <button onClick={ orderZa }> Za </button>
+        <button onClick={ orderC }> Decrescente </button>
+        <button onClick={ orderD }> Crescente </button>
       </div>
     </div>
     <main>
