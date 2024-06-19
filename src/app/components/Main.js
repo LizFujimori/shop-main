@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import styles from "./main.module.css";
+import Spinner from "./Spinner";
 
 export default function Main() {
   const [ listProduct, setProduct ] = useState([]);
@@ -22,17 +23,20 @@ export default function Main() {
     let listAux = [...listProduct].sort((a, b) => a.title.localeCompare(b.title));
   }
 
-    const orderC = () => {
-      const listAuxC = [...listProduct].sort((a, b) => a.price - b.price );
-      setProduct(listAuxC)
-    }
-    const orderD = () => {
-      let listAuxC = [...listProduct].sort((a, b) => a.price - b.price );
-
-    listAuxC = listAuxC.reverse();
-    setProduct(listAuxC);
+  const orderC = () => {
+    const listAuxC = [...listProduct].sort((a, b) => a.price - b.price );
+    setProduct(listAuxC)
   }
+  const orderD = () => {
+    let listAuxC = [...listProduct].sort((a, b) => a.price - b.price );
 
+  listAuxC = listAuxC.reverse();
+  setProduct(listAuxC);
+}
+
+  if( listProduct[0] == null){
+    return <Spinner/>
+  }
   
   return (
     <>
