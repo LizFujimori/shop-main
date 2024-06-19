@@ -42,8 +42,8 @@ export default function Main() {
     <>
     <div>
       <div>
-        <button onClick={ orderAz }> Az </button>
-        <button onClick={ orderZa }> Za </button>
+        <button onClick={ orderAz }> A - Z </button>
+        <button onClick={ orderZa }> Z - A </button>
         <button onClick={ orderC }> Decrescente </button>
         <button onClick={ orderD }> Crescente </button>
       </div>

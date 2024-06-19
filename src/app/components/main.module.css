@@ -4,17 +4,17 @@
     object-fit: cover;
   }
   
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 17px;
-  }
-  
-  .cereja1 {
-    flex: 1 1 calc(33.333% - 16px); 
-    box-sizing: border-box;
-    border: 1px solid #700f27;
-    padding: 16px;
-    border-radius: 10px;
-  }
-  
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.cereja1 {
+  flex: 1 1 calc(33.333% - 16px); 
+  box-sizing: border-box;
+  border: 1px solid #700f27;
+  padding: 16px;
+  border-radius: 10px;
+}
+
