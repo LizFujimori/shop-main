@@ -7,7 +7,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Image height={80} width={80} src="https://pngfre.com/wp-content/uploads/cherry-42.png" alt="Logo" />
-        <h2>Para garotinhas!</h2>
+        <h2>Cherry Blossom After Winter</h2>
       </div>
       <nav className={styles.navbar}>
       </nav>
