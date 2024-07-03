@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./main.module.css";
 import Spinner from "./Spinner";
 import ErrorFetch from "./ErrorFetch";
+import Link from  "next/link";
 
 export default function Main() {
   const [ listProduct, setProduct ] = useState([]);
@@ -90,6 +91,9 @@ export default function Main() {
             <h3>{produto.title}</h3>
             <img src={produto.image} alt={produto.title} className={styles.imagem} />
             <p>Price: R${produto.price}</p>
+            <Link href={"/product/" + produto.id}>
+              <button> Ver Mais </button>
+            </Link>
             <p>{produto.description}</p>
             <p>Category: {produto.category}</p>
             <p>Rating: {produto.rating.count}</p>
